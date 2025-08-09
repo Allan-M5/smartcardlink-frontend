@@ -1,6 +1,9 @@
-﻿import axios from "axios";
+﻿// client/src/api.js
 
-const API_BASE = "https://smartcardlink-backend.fly.dev/api";
+import axios from "axios";
+
+// Use LOCAL during development, replace with Fly.io URL during production
+const API_BASE = "http://localhost:8080/api";
 
 export const fetchProfiles = async () => {
     const response = await axios.get(`${API_BASE}/profiles`);
